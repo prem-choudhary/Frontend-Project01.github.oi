@@ -21,7 +21,7 @@ do {
 
 //  For in Loop
 
-let person = {name: "Prem", age: 20, city: "Delhi"};
+let person = { name: "Prem", age: 20, city: "Delhi" };
 for (let key in person) {
   console.log(key, ":", person[key]);
 }
