@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Instagram Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📸 InstaClone</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <!-- Upload New Post -->
+  <section id="new-post">
+    <h2>➕ Create a New Post</h2>
+    <input type="text" id="username" placeholder="Your name" />
+    <input type="file" id="image-upload" accept="image/*" />
+    <textarea id="caption" placeholder="Write a caption..."></textarea>
+    <button id="post-btn">Post</button>
+  </section>
+
+  <main id="feed"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
