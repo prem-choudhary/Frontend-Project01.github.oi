@@ -18,7 +18,7 @@ function createPost(imageURL, username, caption) {
   const post = document.createElement("div");
   post.className = "post";
 
-  const postId = Date.now(); 
+  const postId = Date.now();
 
   post.innerHTML = `
     <div class="info">@${username}</div>
