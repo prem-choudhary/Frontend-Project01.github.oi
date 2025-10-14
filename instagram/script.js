@@ -4,7 +4,6 @@ const imageUpload = document.getElementById("image-upload");
 const captionInput = document.getElementById("caption");
 const usernameInput = document.getElementById("username");
 const themeToggle = document.getElementById("theme-toggle");
-
 fetch("https://picsum.photos/v2/list?page=2&limit=4")
   .then((res) => res.json())
   .then((data) =>
@@ -13,13 +12,10 @@ fetch("https://picsum.photos/v2/list?page=2&limit=4")
     )
   )
   .catch((err) => console.error("Error loading posts:", err));
-
 function createPost(imageURL, username, caption) {
   const post = document.createElement("div");
   post.className = "post";
-
   const postId = Date.now();
-
   post.innerHTML = `
     <div class="info">@${username}</div>
     <img src="${imageURL}" alt="Post image">
@@ -37,7 +33,6 @@ function createPost(imageURL, username, caption) {
     </div>
   `;
   feed.prepend(post);
-
   const likeBtn = post.querySelector(".like-btn");
   const likesDisplay = post.querySelector(`#likes-${postId}`);
 
