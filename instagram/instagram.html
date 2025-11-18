@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Instagram Clone</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        color: #333;
+        transition: 0.3s;
+      }
+
+      body.dark {
+        background: #1c1c1c;
+        color: #eaeaea;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      body.dark header {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      #theme-toggle {
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      #new-post {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      body.dark #new-post {
+        background: #2a2a2a;
+      }
+
+      #new-post h2 {
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      input, textarea {
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      body.dark input,
+      body.dark textarea {
+        background: #3a3a3a;
+        border-color: #555;
+        color: #eee;
+      }
+
+      #post-btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #0095f6;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.2s;
+      }
+
+      #post-btn:hover {
+        background: #007cd1;
+      }
+
+      #feed {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      .post {
+        background: #fff;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+
+      body.dark .post {
+        background: #2a2a2a;
+      }
+
+      .post img {
+        width: 100%;
+        display: block;
+      }
+
+      .post .info {
+        padding: 15px;
+      }
+
+      .post .username {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>📸 InstaClone</h1>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <section id="new-post">
+      <h2>➕ Create a New Post</h2>
+      <input type="text" id="username" placeholder="Your name" />
+      <input type="file" id="image-upload" accept="image/*" />
+      <textarea id="caption" placeholder="Write a caption..."></textarea>
+      <button id="post-btn">Post</button>
+    </section>
+
+    <main id="feed"></main>
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+      });
+    </script>
+  </body>
+</html>
