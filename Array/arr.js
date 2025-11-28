@@ -5,7 +5,6 @@ const fruits = ["apple", "banana", "orange"];
 const numbers = new Array(1, 2, 3, 4, 5);
 console.log(numbers);
 
-//
 //  print the double age
 
 const ages = [10, 22, 32, 40, 25, 45];
