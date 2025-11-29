@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>School Management System</h1>
+    </header>
+    <main>
+      <section id="student-management">
+        <h2>Student Management</h2>
+        <form id="student-form">
+          <input
+            type="text"
+            id="student-name"
+            placeholder="Student Name"
+            required
+          />
+          <input
+            type="number"
+            id="student-grade"
+            placeholder="Grade"
+            required
+          />
+          <button type="submit">Add Student</button>
+        </form>
+        <div id="student-list">
+          <!-- Student list will be rendered here by JavaScript -->
+        </div>
+      </section>
+
+      <section id="course-management">
+        <h2>Course Management</h2>
+        <form id="course-form">
+          <input
+            type="text"
+            id="course-name"
+            placeholder="Course Name"
+            required
+          />
+          <input
+            type="text"
+            id="course-teacher"
+            placeholder="Teacher"
+            required
+          />
+          <button type="submit">Add Course</button>
+        </form>
+        <div id="course-list">
+          <!-- Course list will be rendered here by JavaScript -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 School Management</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
