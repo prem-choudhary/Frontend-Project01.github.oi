@@ -7,16 +7,13 @@ const addEventOnElements = function (elements, eventType, callback) {
 };
 
 const preloader = document.querySelector("[data-preloader]");
-
 window.addEventListener("load", function () {
   preloader.classList.add("loaded");
   document.body.classList.add("loaded");
 });
-
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
-
 const toggleNav = function () {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
@@ -24,7 +21,6 @@ const toggleNav = function () {
 };
 
 addEventOnElements(navTogglers, "click", toggleNav);
-
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
