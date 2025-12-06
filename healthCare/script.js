@@ -35,9 +35,7 @@ const activeElementOnScroll = function () {
 };
 
 window.addEventListener("scroll", activeElementOnScroll);
-
 const revealElements = document.querySelectorAll("[data-reveal]");
-
 const revealElementOnScroll = function () {
   for (let i = 0, len = revealElements.length; i < len; i++) {
     if (
