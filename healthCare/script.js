@@ -5,7 +5,6 @@ const addEventOnElements = function (elements, eventType, callback) {
     elements[i].addEventListener(eventType, callback);
   }
 };
-
 const preloader = document.querySelector("[data-preloader]");
 window.addEventListener("load", function () {
   preloader.classList.add("loaded");
@@ -19,11 +18,9 @@ const toggleNav = function () {
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
 };
-
 addEventOnElements(navTogglers, "click", toggleNav);
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
-
 const activeElementOnScroll = function () {
   if (window.scrollY > 100) {
     header.classList.add("active");
@@ -33,7 +30,6 @@ const activeElementOnScroll = function () {
     backTopBtn.classList.remove("active");
   }
 };
-
 window.addEventListener("scroll", activeElementOnScroll);
 const revealElements = document.querySelectorAll("[data-reveal]");
 const revealElementOnScroll = function () {
